@@ -1,0 +1,99 @@
+baseURL = 'https://example.org/'
+languageCode = 'de-de'
+title = 'AllyCraft'
+theme = 'hugo-theme'
+#enableGitInfo = true
+enableRobotsTXT = true
+paginate = 9
+
+[params]
+disable_stay_uptodate = true
+
+author = 'AllyCraft Team'
+author_image = '/images/authors/team.webp'
+moto = 'Partizipation in Minecraft'
+description = 'Tauche in die Minecraft Welt von AllyCraft ein'
+main_image = '/images/authors/team.webp'
+main_image_alt = 'Some alt text'
+logo = '/logo.webp'
+
+[params.p1]
+heading = "🤝 Partizipation"
+content = [
+    {text = 'Bereichere unsere wachsende Gemeinschaft mit deinen Ideen!'},
+    {text = '<b><span style="color: green; font-size: 2rem;">&#10003;</span> Offen für alle Ideen</b>'},
+    {text = '<b><span style="color: green; font-size: 2rem;">&#10003;</span> Umfassende Mitgestaltung und Umsetzung durch die Jugendlichen</b>'},
+    {text = '<b><span style="color: green; font-size: 2rem;">&#10003;</span> Initiiert und entwickelt von Jugendlichen</b>'}
+]
+image = "/images/home-1.png"
+
+[params.p2]
+heading = "🔒 Sicherheit"
+content = [
+    {text = 'Bei uns ist die Sicherheit eine der obersten Prioritäten!'},
+    {text = '<b><span style="color: green; font-size: 2rem;">&#10003;</span> Interventionen bis zum Ausschluss bei Gefährdung des „Safespaces“</b>'},
+    {text = '<b><span style="color: green; font-size: 2rem;">&#10003;</span> Serverzugang nur durch unsere Freigabe</b>'}
+]
+image = "/images/home-2.png"
+
+[params.p3]
+heading = " 💬 Pädagogik"
+content = [
+    {text = 'Gaming verschmilzt mit Pädagogik!'},
+    {text = '<b><span style="color: green; font-size: 2rem;">&#10003;</span> Begleitung durch erfahrene Fachkräfte, Ansprechpartner für Lösungen</b>'},
+    {text = '<b><span style="color: green; font-size: 2rem;">&#10003;</span> Förderung einer Kultur der Offenheit und des Respekts, unterstützt durch ein Regelwerk</b>'},
+    {text = '<b><span style="color: green; font-size: 2rem;">&#10003;</span> Sensibilisierung für potenzielle Gefahren im Online-Bereich</b>'}
+]
+image = "/images/home-3.png"
+
+[params.p4]
+heading = "Neuigkeiten"
+content = [{text = 'Unsere neusten Posts'}]
+
+[params.social_media.github]
+enabled = true
+url = 'https://github.com/stja-mc'
+
+[[params.team]]
+name = "Ben"
+role = "Projektmanager"
+image = "images/FireBlizza.png"
+
+[[params.team]]
+name = "Helixam"
+role = "Moderator"
+image = "images/Helixam.png"
+
+[[params.team]]
+name = "Tert0"
+role = "Developer"
+image = "images/Tert0.png"
+
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+
+[[menu.main]]
+identifier = "about"
+name = "Über uns"
+url = "/about/"
+
+[[menu.footer]]
+identifier = "imprint"
+name = "Impressum"
+url = "https://example.com/TODO"
+
+[[menu.footer]]
+identifier = "privacy"
+name = "Datenschutzerklärung"
+url = "https://example.com/TODO"
+
+[[menu.footer]]
+identifier = "about"
+name = "Über uns"
+url = "/about/"
+
+[[build.cachebusters]]
+source = ".*\\.html"
+target = "css"
