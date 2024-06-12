@@ -1,8 +1,8 @@
-baseURL = 'https://example.org/'
+#baseURL = 'https://example.org/'
 languageCode = 'de-de'
 title = 'AllyCraft'
 theme = 'hugo-theme'
-#enableGitInfo = true
+enableGitInfo = true
 enableRobotsTXT = true
 paginate = 9
 
@@ -82,12 +82,12 @@ url = "/about/"
 [[menu.footer]]
 identifier = "imprint"
 name = "Impressum"
-url = "https://example.com/TODO"
+url = "https://stja.de/impressum/"
 
 [[menu.footer]]
 identifier = "privacy"
 name = "Datenschutzerklärung"
-url = "https://example.com/TODO"
+url = "https://stja.de/datenschutz/"
 
 [[menu.footer]]
 identifier = "about"
