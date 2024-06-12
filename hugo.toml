@@ -2,7 +2,6 @@
 languageCode = 'de-de'
 title = 'AllyCraft'
 theme = 'hugo-theme'
-enableGitInfo = true
 enableRobotsTXT = true
 paginate = 9
 
