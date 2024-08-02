@@ -7,3 +7,6 @@ npm install
 cd ../..
 hugo server
 ```
+
+## Credits
+- Icons: [svgmoji](https://github.com/svgmoji) (MIT-License)

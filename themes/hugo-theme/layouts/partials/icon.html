@@ -1,0 +1,3 @@
+{{ $path :=  printf "icons/%s.svg" .icon }}
+{{ $image := resources.Get $path }}
+<img src='{{ $image.RelPermalink }}' style="height: 1em; width: 1em; display: inline; vertical-align: middle;"/>

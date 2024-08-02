@@ -58,12 +58,18 @@
             <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
                 <div class="md:pt-12 sm:pt-6 lg:pt-20">
                     <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
+                        {{ if ne .Site.Params.P1.Icon nil }}
+                            {{ partial "icon.html" (dict "icon" .Site.Params.P1.Icon ) }}
+                        {{ end }}
                         {{ .Site.Params.P1.Heading }}
                     </h2>
                     <div class="mt-6 text-gray-900 dark:text-white">
                         <div class="mt-6 space-y-6 text-gray-900 dark:text-white">
                             {{ range .Site.Params.P1.Content }}
                             <p class="text-lg text-gray-900 dark:text-white">
+                                {{ if ne .icon nil }}
+                                    {{ partial "icon.html" (dict "icon" .icon)}}
+                                {{ end }}
                                 {{ .text | safeHTML }}
                             </p>
                             {{ end }}
@@ -80,12 +86,18 @@
             <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
                 <div class="md:pt-12 sm:pt-6 lg:pt-20">
                     <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
+                        {{ if ne .Site.Params.P2.Icon nil }}
+                            {{ partial "icon.html" (dict "icon" .Site.Params.P2.Icon) }}
+                        {{ end }}
                         {{ .Site.Params.P2.Heading }}
                     </h2>
                     <div class="mt-6 text-gray-900 dark:text-white">
                         <div class="mt-6 space-y-6 text-gray-900 dark:text-white">
                             {{ range .Site.Params.P2.Content }}
                             <p class="text-lg text-gray-900 dark:text-white">
+                                {{ if ne .icon nil }}
+                                    {{ partial "icon.html" (dict "icon" .icon)}}
+                                {{ end }}
                                 {{ .text | safeHTML }}
                             </p>
                             {{ end }}
@@ -146,16 +158,72 @@
             <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
                 <div class="md:pt-12 sm:pt-6 lg:pt-20">
                     <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
+                        {{ if ne .Site.Params.P3.Icon nil }}
+                            {{ partial "icon.html" (dict "icon" .Site.Params.P3.Icon) }}
+                        {{ end }}
                         {{ .Site.Params.P3.Heading }}
                     </h2>
                     <div class="mt-6 text-gray-900 dark:text-white">
                         <div class="mt-6 space-y-6 text-gray-900 dark:text-white">
                             {{ range .Site.Params.P3.Content }}
                             <p class="text-lg text-gray-900 dark:text-white">
+                                {{ if ne .icon nil }}
+                                    {{ partial "icon.html" (dict "icon" .icon)}}
+                                {{ end }}
                                 {{ .text | safeHTML }}
                             </p>
                             {{ end }}
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- P4 -->
+    <div class="relative my-4">
+        <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8 max-sm:flex max-sm:flex-col-reverse">
+            <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
+                <div class="md:pt-12 sm:pt-6 lg:pt-20">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
+                        {{ if ne .Site.Params.P4.Icon nil }}
+                            {{ partial "icon.html" (dict "icon" .Site.Params.P4.Icon) }}
+                        {{ end }}
+                        {{ .Site.Params.P4.Heading }}
+                    </h2>
+                    <div class="mt-6 text-gray-900 dark:text-white">
+                        <div class="mt-6 space-y-6 text-gray-900 dark:text-white">
+                            {{ range .Site.Params.P4.Content }}
+                            <p class="text-lg text-gray-900 dark:text-white">
+                                {{ if ne .icon nil }}
+                                    {{ partial "icon.html" (dict "icon" .icon)}}
+                                {{ end }}
+                                {{ .text | safeHTML }}
+                            </p>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative sm:py-8 lg:py-0">
+                <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
+                    <div class="absolute inset-y-0 w-full bg-gray-50 dark:bg-gray-900/10 right-1/2 rounded-r-3xl lg:right-72"></div><svg class="absolute -ml-3 top-8 left-1/2 lg:-right-8 lg:left-auto lg:top-12" width="404" height="392" fill="none" viewBox="0 0 404 392" loading="lazy">
+                        <defs>
+                            <pattern id="02f20b47-fd69-4224-a62a-4c9de5c763f7" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <rect x="0" y="0" width="4" height="4" class="text-gray-200 dark:text-gray-900/60" fill="currentcolor"></rect>
+                            </pattern>
+                        </defs>
+                        <rect width="404" height="392" fill="url(#02f20b47-fd69-4224-a62a-4c9de5c763f7)"></rect>
+                    </svg>
+                </div>
+                <div class="relative w-full h-auto px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:py-20">
+                    <div class="overflow-hidden shadow-xl rounded-2xl">
+                        {{ $p2image := resources.Get .Site.Params.P4.Image }}
+                        {{ with $p2image }}
+                        {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
+                        <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="w-full h-auto" alt="P1" loading="lazy" />
+                        {{ end }}
+                        {{ end }}
                     </div>
                 </div>
             </div>
@@ -170,10 +238,16 @@
         <div class="relative px-2 mx-auto max-w-7xl">
             <div class="text-center">
                 <h2 class="text-3xl font-black tracking-tight text-primary-500 dark:text-primary-300 sm:text-4xl">
-                    {{ .Site.Params.P4.Heading }}
+                    {{ if ne .Site.Params.P5.Icon nil }}
+                            {{ partial "icon.html" (dict "icon" .Site.Params.P5.Icon) }}
+                        {{ end }}
+                    {{ .Site.Params.P5.Heading }}
                 </h2>
-                {{ range .Site.Params.P4.Content }}
+                {{ range .Site.Params.P5.Content }}
                 <p class="max-w-2xl mx-auto mt-3 text-xl text-gray-500 dark:text-gray-300 sm:mt-4">
+                    {{ if ne .icon nil }}
+                        {{ partial "icon.html" (dict "icon" .icon)}}
+                    {{ end }}
                     {{ .text | safeHTML }}
                 </p>
                 {{ end }}
@@ -241,45 +315,6 @@
             </div>
         </div>
     </div>
-
-    {{ if not .Site.Params.Disable_stay_uptodate}}
-    <!-- CTA section -->
-    <div class="relative pb-16 mt-6">
-        <div class="max-w-md mx-auto px-7 sm:max-w-3xl lg:max-w-7xl">
-            <div class="relative px-6 py-10 overflow-hidden shadow-xl bg-primary-500 rounded-2xl sm:px-12 sm:py-20">
-                <div aria-hidden="true" class="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0">
-                    <svg class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1463 360" loading="lazy">
-                        <path class="text-primary-600 text-opacity-40" fill="currentColor" d="M-82.673 72l1761.849 472.086-134.327 501.315-1761.85-472.086z" />
-                        <path class="text-primary-600 text-opacity-40" fill="currentColor" d="M-217.088 544.086L1544.761 72l134.327 501.316-1761.849 472.086z" />
-                    </svg>
-                </div>
-                <div class="relative">
-                    <div class="sm:text-center">
-                        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                            {{ .Site.Params.P5.Heading }}
-                        </h2>
-                        {{ range .Site.Params.P5.Content }}
-                        <p class="max-w-2xl mx-auto mt-6 text-lg text-primary-100">
-                            {{ .text }}
-                        </p>
-                        {{ end }}
-                    </div>
-                    <form action="{{ .Site.Params.P5.Action }}" class="mt-12 sm:mx-auto sm:flex sm:max-w-lg">
-                        <div class="flex-1 min-w-0">
-                            <label for="cta-email" class="sr-only">{{ .Site.Params.P5.Label }}</label>
-                            <input id="cta-email" type="email" class="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-transparent rounded-md shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-500" placeholder="{{ .Site.Params.P5.Placeholder }}">
-                        </div>
-                        <div class="mt-4 sm:mt-0 sm:ml-3">
-                            <button type="submit" class="block w-full px-5 py-3 text-base font-medium text-white bg-gray-900 border border-transparent rounded-md shadow hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-500 sm:px-10">
-                                {{ .Site.Params.P5.Button }}
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{ end }}
 
 </main>
 {{ end }}

@@ -16,7 +16,7 @@
         pname = "hugo-theme";
         version = "v0.0.1";
         src = "${src}/themes/hugo-theme";
-        npmDepsHash = "sha256-OZLRXD8cRg/8bL8YTz3mqBkWfmf4MFLA4+wRcwrt/Jw=";
+        npmDepsHash = "sha256-9UOPRLFyzuicRDKLqKJlLqOcbOezdTJSaw4//2F5ek8=";
         dontNpmBuild = true;
 
         installPhase = ''

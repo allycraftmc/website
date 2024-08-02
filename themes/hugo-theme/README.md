@@ -2,6 +2,9 @@
 This Theme is a fork of [Tailbliss](https://github.com/nusserstudios/tailbliss).
 
 
+## Credits
+- Font: [Blinker](https://fonts.google.com/specimen/Blinker) (Open Font License)
+
 ## License
 [Apache-2.0 license](http://www.apache.org/licenses/): Copyright 2022 NusserStudios
 
