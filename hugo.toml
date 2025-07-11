@@ -3,7 +3,9 @@ languageCode = 'de-de'
 title = 'AllyCraft'
 theme = 'hugo-theme'
 enableRobotsTXT = true
-paginate = 9
+
+[pagination]
+pagerSize = 9
 
 [params]
 author = 'AllyCraft Team'
@@ -86,6 +88,12 @@ url = "/posts/"
 identifier = "about"
 name = "Über uns"
 url = "/about/"
+
+[[menu.main]]
+identifier = "koops"
+name = "Kooperationen"
+url = "/koop/"
+
 
 [[menu.footer]]
 identifier = "imprint"
