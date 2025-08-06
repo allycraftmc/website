@@ -7,6 +7,9 @@ enableRobotsTXT = true
 [pagination]
 pagerSize = 9
 
+[outputs]
+home = [ 'HTML', 'RSS', 'JSON' ]
+
 [params]
 env = 'production'
 description = 'TODO description'
