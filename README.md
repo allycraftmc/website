@@ -1,12 +1,6 @@
 # AllyCraft Website
 ## Setup
 ```bash
-git clone --recursive git@github.com:stja-mc/website.git
-cd website/themes/hugo-theme
-npm install
-cd ../..
+git clone --recursive git@github.com:allycraftmc/website.git
 hugo server
 ```
-
-## Credits
-- Icons: [svgmoji](https://github.com/svgmoji) (MIT-License)

@@ -1,9 +1,0 @@
-@font-face {
-    font-family: "Blinker";
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/Blinker-Regular.ttf') format("truetype");
-    /* TODO: provide woff, ... files */
-}
-
-/* TODO: add bold, etc font files */

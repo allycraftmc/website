@@ -1,107 +1,51 @@
-#baseURL = 'https://example.org/'
+baseURL = 'https://mc.allycraft.de/'
 languageCode = 'de-de'
 title = 'AllyCraft'
-theme = 'hugo-theme'
+theme = 'PaperMod'
 enableRobotsTXT = true
-paginate = 9
+
+[pagination]
+pagerSize = 9
 
 [params]
+env = 'production'
+description = 'TODO description'
 author = 'AllyCraft Team'
-author_image = '/images/authors/team.webp'
-moto = 'Partizipation in Minecraft'
-description = 'Tauche in die Minecraft Welt von AllyCraft ein'
-main_image = '/images/main_screenshot.png'
-main_image_alt = 'Screenshot aus der Höhe aus unserer Survival Welt'
-logo = '/logo.webp'
 
-[params.p1]
-heading = 'Partizipation'
-icon = "handshake"
-content = [
-    {text = 'Bereichere unsere wachsende Gemeinschaft mit deinen Ideen!'},
-    {icon = 'checkmark', text = 'Offen für alle Ideen'},
-    {icon = 'checkmark', text = 'Umfassende Mitgestaltung und Umsetzung durch die Jugendlichen'},
-    {icon = 'checkmark', text = 'Initiiert und entwickelt von Jugendlichen'}
-]
-image = "/images/home-1.png"
+[params.assets]
+favicon = 'favicon/favicon.ico'
+favicon16x16 = 'favicon/favicon.ico'
+favicon32x32 = 'favicon/favicon.ico'
 
-[params.p2]
-heading = "Sicherheit"
-icon = "lock"
-content = [
-    {text = 'Bei uns ist die Sicherheit eine der obersten Prioritäten!'},
-    {icon = 'checkmark', text = 'Interventionen bis zum Ausschluss bei Gefährdung des „Safespaces“'},
-    {icon = 'checkmark', text = 'Serverzugang nur durch unsere Freigabe'}
-]
-image = "/images/home-2.png"
+[params.homeInfoParams]
+Title = 'AllyCraft'
+Content = 'Partizipation in Minecraft TODO'
+Author = 'hi'
 
-[params.p3]
-heading = "Pädagogik"
-icon = "speech_bubble"
-content = [
-    {text = 'Gaming verschmilzt mit Pädagogik!'},
-    {icon = 'checkmark', text = 'Begleitung durch erfahrene Fachkräfte, Ansprechpartner für Lösungen'},
-    {icon = 'checkmark', text = 'Förderung einer Kultur der Offenheit und des Respekts, unterstützt durch ein Regelwerk'},
-    {icon = 'checkmark', text = 'Sensibilisierung für potenzielle Gefahren im Online-Bereich'}
-]
-image = "/images/home-4.png"
-
-[params.p4]
-heading = "Begegnungräume"
-icon = "people" 
-content = [
-    {text = 'AllyCraft schafft einen digitalen Begegnungsraum für Jugendliche durch die Plattform Minecraft. Ziel ist es, Jugendliche mit gemeinsamen Interessen zu verbinden, die gegenseitige Unterstützung (Peer-to-Peer) zu fördern und dass hierfür auch Jugendeinrichtungen als Begegnungsstätten zur Verfügung stehen.'}
-]
-image = "/images/home-3.png"
-
-[params.p5]
-heading = "Neuigkeiten"
-content = [{text = 'Unsere neusten Posts'}]
-
-[params.social_media.github]
-enabled = true
-url = 'https://github.com/stja-mc'
-
-[[params.team]]
-name = "Ben"
-role = "Projektmanager"
-image = "images/FireBlizza.png"
-
-[[params.team]]
-name = "Helixam"
-role = "Moderator"
-image = "images/Helixam.png"
-
-[[params.team]]
-name = "Tert0"
-role = "Developer"
-image = "images/Tert0.png"
+[[params.socialIcons]]
+name = 'github'
+url = 'https://github.com/allycraftmc'
 
 [[menu.main]]
-identifier = "posts"
-name = "Posts"
-url = "/posts/"
+identifier = 'posts'
+name = 'Posts'
+url = '/posts/'
+weight = 1
 
 [[menu.main]]
 identifier = "about"
 name = "Über uns"
 url = "/about/"
+weight = 2
 
-[[menu.footer]]
+[[menu.main]]
 identifier = "imprint"
 name = "Impressum"
 url = "https://stja.de/impressum/"
+weight = 4
 
-[[menu.footer]]
+[[menu.main]]
 identifier = "privacy"
 name = "Datenschutzerklärung"
 url = "https://stja.de/datenschutz/"
-
-[[menu.footer]]
-identifier = "about"
-name = "Über uns"
-url = "/about/"
-
-[[build.cachebusters]]
-source = ".*\\.html"
-target = "css"
+weight = 3
