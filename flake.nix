@@ -10,7 +10,7 @@
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
-      src = pkgs.lib.cleanSource ./.;
+      src = pkgs.lib.cleanSource self;
     in
     {
       packages.${system} = {
